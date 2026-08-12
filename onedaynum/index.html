@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0d3880" />
+<title>Peptide Product — All On Sale</title>
+<meta name="description" content="Peptide products all on sale. Factory direct, good feedback, fast & safe delivery (DHL / FedEx / UPS). Chat with us on WhatsApp." />
+
+<!-- ============================================================
+     【Meta Pixel 代码 — 开始】
+     说明：把下面两处 YOUR_PIXEL_ID_HERE 全部替换成你自己的 Pixel ID
+          （在 Meta 事件管理工具里那串纯数字 ID）。
+          共 2 处：第 1 处在 fbq('init', ...)；第 2 处在 noscript 的 img src 里。
+     ============================================================ -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1700155944579390');   // ←【第 1 处】在这里填你的 Pixel ID
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1700155944579390&ev=PageView&noscript=1" /></noscript>  <!-- ←【第 2 处】在这里也填同一个 Pixel ID -->
+<!-- ============================================================
+     【Meta Pixel 代码 — 结束】
+     ============================================================ -->
+
+<!-- Font Awesome（WhatsApp 图标） -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<style>
+  :root{
+    --page-bg: #0d3880;        /* 网页底色，与海报边框融合，防止长屏上下断层 */
+    --wa-green: #25d366;       /* WhatsApp 官方绿 */
+    --wa-green-dark: #20ba5a;  /* Hover/Active 加深色 */
+  }
+  *{ margin:0; padding:0; box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+
+  /* ===== 核心布局：Flexbox 纵向响应式 ===== */
+  body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;           /* 水平居中；如需靠左可改 flex-start */
+    justify-content:flex-start;   /* 整体适当上移 */
+    min-height:100vh;
+    min-height:100dvh;
+    background-color:var(--page-bg);
+    /* 底部预留按钮空间 + iOS 安全区 */
+    padding:10px 10px calc(108px + env(safe-area-inset-bottom));
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+
+  /* ===== 海报图片：任何屏幕比例 100% 完整显示，绝不裁剪 ===== */
+  .poster{ width:100%; max-width:720px; padding-top:4px; }
+  .poster img{
+    display:block;
+    width:100%;
+    height:auto;
+    object-fit:contain;
+    border-radius:14px;
+    background:#f2f2f2;   /* 与海报自身底色一致，加载期间不跳色 */
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+
+  /* ===== WhatsApp 跳转按钮 ===== */
+  .wa-btn{
+    position:fixed;              /* 任何屏幕都稳定在偏底部 */
+    bottom:5%;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:99;
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    width:min(92%, 420px);
+    padding:14px 20px;
+    background:var(--wa-green);
+    color:#fff;
+    font-size:17px; font-weight:700;
+    text-decoration:none;
+    border:2px solid #fff;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(0,0,0,.35);
+    transition:background .2s ease, box-shadow .2s ease, transform .1s ease;
+  }
+  .wa-btn i{ font-size:22px; line-height:1; }
+  .wa-btn:hover{ background:var(--wa-green-dark); box-shadow:0 8px 24px rgba(0,0,0,.45); }
+  .wa-btn:active{ transform:translateX(-50%) translateY(2px) scale(.98); box-shadow:0 3px 10px rgba(0,0,0,.35); }
+</style>
+</head>
+<body>
+
+  <!-- 海报图：把 src 换成你的图片地址（同目录文件 或 在线 URL 均可） -->
+  <main class="poster">
+    <img src="poster.jpg" alt="Peptide product on sale — good feedback, factory facility, DHL/FedEx/UPS delivery" />
+  </main>
+
+  <!-- WhatsApp 官方链接：号码无 + 号/空格/破折号；text 已用 encodeURIComponent 转码 -->
+  <a class="wa-btn"
+     href="https://wa.me/16469024837?text=Hello%2C%20I%20want%20more%20info%20about%20the%20peptide%20products"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    Chat with us on WhatsApp
+  </a>
+
+</body>
+</html>
